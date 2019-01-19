@@ -116,9 +116,16 @@ console.log(`the 50 runners have donated ${ticketPriceTotal} dollars`);
 
 // Problem 3
     //charitySplit
+    let splitPercentage = .5;
 
     let charitySplit = runners.map((runners) => {
-        return runners.donation * .5 // HOW CAN I GET THIS .5 to be entered as a variable?!
+        return runners.donation * splitPercentage // HOW CAN I GET THIS .5 to be entered as a variable when charitySplit is called?!
     });
 
     console.log(charitySplit);
+
+    letTotalCharityDonation = charitySplit.reduce((accumulator, currentVal) => {
+        return accumulator + currentVal;
+    }, 0);
+
+    console.log(`the 50 runners have donated ${letTotalCharityDonation} dollars TO CHARITY`);
